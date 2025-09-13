@@ -1,6 +1,6 @@
 6
-4C:\Windows\System32\bank\Bank.Domain.Tests\Usings.cs©
-?C:\Windows\System32\bank\Bank.Domain.Tests\BanckAccountTests.cs
+4C:\Windows\System32\Bank\Bank.Domain.Tests\Usings.cs»
+?C:\Windows\System32\Bank\Bank.Domain.Tests\BanckAccountTests.cs
 
  !
 
@@ -8,10 +8,4 @@
  #F V
   %
  4 <
-   
-
- 9
- #  F V
- ## '
- &&4 <
-   ## && 
+   

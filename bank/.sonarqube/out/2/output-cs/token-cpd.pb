@@ -1,5 +1,5 @@
 ä
-:C:\Windows\System32\bank\Bank.Domain\Models\BankAccount.cs
+:C:\Windows\System32\Bank\Bank.Domain\Models\BankAccount.cs
 	namespace 	
 Bank
  
