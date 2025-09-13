@@ -1,1 +1,1 @@
-C:\Windows\System32\Bank\.sonarqube\out\1
+C:\Windows\System32\bank\.sonarqube\out\1

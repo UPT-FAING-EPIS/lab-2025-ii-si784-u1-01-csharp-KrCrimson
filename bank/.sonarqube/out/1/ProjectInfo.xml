@@ -7,14 +7,14 @@
   <FullPath>C:\Windows\System32\Bank\Bank.Domain.Tests\Bank.Domain.Tests.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
-    <AnalysisResult Id="FilesToAnalyze" Location="C:\Windows\System32\Bank\.sonarqube\conf\1\FilesToAnalyze.txt" />
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Windows\System32\bank\.sonarqube\conf\1\FilesToAnalyze.txt" />
   </AnalysisResults>
   <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Windows\System32\Bank\.sonarqube\out\1\Issues.json</Property>
-    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Windows\System32\Bank\.sonarqube\out\1</Property>
-    <Property Name="sonar.cs.scanner.telemetry">C:\Windows\System32\Bank\.sonarqube\out\1\Telemetry.json</Property>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Windows\System32\bank\.sonarqube\out\1\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Windows\System32\bank\.sonarqube\out\1</Property>
+    <Property Name="sonar.cs.scanner.telemetry">C:\Windows\System32\bank\.sonarqube\out\1\Telemetry.json</Property>
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>
-  <TargetFramework>net7.0</TargetFramework>
+  <TargetFramework>net8.0</TargetFramework>
 </ProjectInfo>

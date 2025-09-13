@@ -4,15 +4,15 @@
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
   <ProjectGuid>6a23658a-81c0-418d-838c-7c9a61c62f97</ProjectGuid>
-  <FullPath>C:\Windows\System32\Bank\Bank.Domain\Bank.Domain.csproj</FullPath>
+  <FullPath>C:\Windows\System32\bank\Bank.Domain\Bank.Domain.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
-    <AnalysisResult Id="FilesToAnalyze" Location="C:\Windows\System32\Bank\.sonarqube\conf\2\FilesToAnalyze.txt" />
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Windows\System32\bank\.sonarqube\conf\2\FilesToAnalyze.txt" />
   </AnalysisResults>
   <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Windows\System32\Bank\.sonarqube\out\2\Issues.json</Property>
-    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Windows\System32\Bank\.sonarqube\out\2</Property>
-    <Property Name="sonar.cs.scanner.telemetry">C:\Windows\System32\Bank\.sonarqube\out\2\Telemetry.json</Property>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Windows\System32\bank\.sonarqube\out\2\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Windows\System32\bank\.sonarqube\out\2</Property>
+    <Property Name="sonar.cs.scanner.telemetry">C:\Windows\System32\bank\.sonarqube\out\2\Telemetry.json</Property>
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>
