@@ -15,6 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Verify repo structure
+        run: |
+          pwd
+          ls -la
+          if [ ! -d "bank" ]; then
+            echo "ERROR: 'bank' folder not found at repository root.";
+            exit 1;
+          fi
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
@@ -25,7 +33,6 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
       - name: Instalar Scanner
         run: dotnet tool install -g dotnet-sonarscanner
-        working-directory: bank
       - name: Ejecutar pruebas y análisis Sonar
         run: |
           echo "SONAR_ORG=${{ env.SONAR_ORG }}" && echo "SONAR_PROJECT=${{ env.SONAR_PROJECT }}"

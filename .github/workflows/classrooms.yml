@@ -5,7 +5,8 @@ name: Autograding Tests
 permissions:
   checks: write
   actions: read
-  contents: read
+  contents: write
+  packages: write
 jobs:
   run-autograding-tests:
     runs-on: ubuntu-latest
@@ -18,19 +19,19 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t1
-        setup-command: export HOME='/home/runner' && cd Bank && dotnet restore
-        command: export HOME='/home/runner' && cd Bank && dotnet test
+        setup-command: export HOME='/home/runner' && cd bank && dotnet restore
+        command: export HOME='/home/runner' && cd bank && dotnet test
         timeout: 10
         max-score: 4
     - name: Build NuGet package
       run: |
-        cd Bank
+        cd bank
         dotnet pack Bank.Domain/Bank.Domain.csproj --configuration Release --output ./nupkg
     - name: Publish to GitHub Packages
       env:
         NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        cd Bank/nupkg
+        cd bank/nupkg
         dotnet nuget push "*.nupkg" --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key $NUGET_AUTH_TOKEN --skip-duplicate
     - name: Create GitHub Release for v1.0.0
       if: github.ref == 'refs/heads/main'
