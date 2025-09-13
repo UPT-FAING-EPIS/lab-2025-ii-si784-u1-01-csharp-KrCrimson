@@ -8,6 +8,9 @@ on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+permissions:
+  contents: write         # para crear releases/tags con GITHUB_TOKEN
+  packages: write         # no afecta PAT, pero permite GITHUB_TOKEN con packages si lo usas
 
 jobs:
   sonarqube:
@@ -37,7 +40,7 @@ jobs:
         run: |
           echo "SONAR_ORG=${{ env.SONAR_ORG }}" && echo "SONAR_PROJECT=${{ env.SONAR_PROJECT }}"
           dotnet restore
-          dotnet-sonarscanner begin /k:"${{ env.SONAR_PROJECT }}" /o:"${{ env.SONAR_ORG }}" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="*/*/*/coverage.opencover.xml" /d:sonar.qualitygate.wait=true
+          dotnet-sonarscanner begin /k:"${{ env.SONAR_PROJECT }}" /o:"${{ env.SONAR_ORG }}" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" /d:sonar.qualitygate.wait=true
           dotnet build
           dotnet test --collect:"XPlat Code Coverage;Format=opencover"
           dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}" || true
@@ -49,7 +52,7 @@ jobs:
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GH_NUGET_TOKEN }}
         run: dotnet nuget push "*.nupkg" --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key $NUGET_AUTH_TOKEN --skip-duplicate
-        working-directory: bank/nupkg
+        working-directory: Bank/nupkg
       - name: Create GitHub Release v1.0.0
         if: github.ref == 'refs/heads/main'
         env:
