@@ -43,7 +43,7 @@ jobs:
           dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}" || true
         working-directory: bank
       - name: Build NuGet package
-        run: dotnet pack bank.Domain/bank.Domain.csproj -c Release -o ./nupkg /p:PackageVersion=1.0.0
+        run: dotnet pack Bank.Domain/Bank.Domain.csproj -c Release -o ./nupkg /p:PackageVersion=1.0.0
         working-directory: bank
       - name: Publish to GitHub Packages
         env:
