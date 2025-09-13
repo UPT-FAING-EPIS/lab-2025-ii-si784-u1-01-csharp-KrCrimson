@@ -1,5 +1,5 @@
 name: Sonar + NuGet CI
-  # Este workflow puede incluir pasos para publicar paquetes nuget
+# Este workflow puede incluir pasos para publicar paquetes nuget
 env:
   DOTNET_VERSION: '8.x'                     # la versión de .NET
   SONAR_ORG: 'krcrimson'                    # Nombre de la organización de sonar cloud
