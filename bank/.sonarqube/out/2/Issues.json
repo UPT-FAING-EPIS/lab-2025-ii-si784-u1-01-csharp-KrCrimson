@@ -5,9 +5,9 @@
     {
       "tool": {
         "name": "Compilador de Microsoft (R) Visual C#",
-        "version": "4.11.0.0",
-        "fileVersion": "4.11.0-3.24554.2 (bc1c3011)",
-        "semanticVersion": "4.11.0",
+        "version": "4.14.0.0",
+        "fileVersion": "4.14.0-3.25413.5 (b828a8df)",
+        "semanticVersion": "4.14.0",
         "language": "es-ES"
       },
       "results": [
@@ -18,7 +18,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Windows/System32/Bank/Bank.Domain/Models/BankAccount.cs",
+                "uri": "file:///C:/Windows/System32/bank/Bank.Domain/Models/BankAccount.cs",
                 "region": {
                   "startLine": 7,
                   "startColumn": 17,
@@ -31,7 +31,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Windows/System32/Bank/Bank.Domain/Models/BankAccount.cs",
+                "uri": "file:///C:/Windows/System32/bank/Bank.Domain/Models/BankAccount.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 33,
@@ -52,7 +52,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Windows/System32/Bank/Bank.Domain/Models/BankAccount.cs",
+                "uri": "file:///C:/Windows/System32/bank/Bank.Domain/Models/BankAccount.cs",
                 "region": {
                   "startLine": 26,
                   "startColumn": 55,
@@ -73,7 +73,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Windows/System32/Bank/Bank.Domain/Models/BankAccount.cs",
+                "uri": "file:///C:/Windows/System32/bank/Bank.Domain/Models/BankAccount.cs",
                 "region": {
                   "startLine": 18,
                   "startColumn": 55,
@@ -94,7 +94,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Windows/System32/Bank/Bank.Domain/Models/BankAccount.cs",
+                "uri": "file:///C:/Windows/System32/bank/Bank.Domain/Models/BankAccount.cs",
                 "region": {
                   "startLine": 20,
                   "startColumn": 55,
