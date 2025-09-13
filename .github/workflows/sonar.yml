@@ -91,18 +91,20 @@ jobs:
           echo "SONAR_PROJECT: ${{ env.SONAR_PROJECT }}"
           echo "Token configured: ${{ secrets.SONAR_TOKEN != '' }}"
           echo "Token length: ${#SONAR_TOKEN}" 
-          echo "SonarScanner version:"
-          dotnet-sonarscanner --version
+          echo "SonarScanner installed successfully"
+          which dotnet-sonarscanner
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: SonarCloud Begin
         working-directory: ./Bank
         run: |
-          echo "Starting SonarCloud analysis..."
-          echo "Project Key: ${{ env.SONAR_PROJECT }}"
-          echo "Organization: ${{ env.SONAR_ORG }}"
+          echo "🚀 Starting SonarCloud analysis..."
+          echo "📋 Project Key: ${{ env.SONAR_PROJECT }}"
+          echo "🏢 Organization: ${{ env.SONAR_ORG }}"
+          echo "🔧 Running dotnet-sonarscanner begin..."
           dotnet-sonarscanner begin /k:"${{ env.SONAR_PROJECT }}" /o:"${{ env.SONAR_ORG }}" /n:"API Bank" /v:"1.0.${{ github.run_number }}" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" /d:sonar.qualitygate.wait=true
+          echo "✅ SonarCloud begin completed successfully"
 
       - name: Restore and Build
         working-directory: ./Bank
