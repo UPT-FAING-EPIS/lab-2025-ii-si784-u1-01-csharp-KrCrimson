@@ -47,7 +47,7 @@ jobs:
         working-directory: Bank
       - name: Publish to GitHub Packages
         env:
-          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUGET_AUTH_TOKEN: ${{ secrets.GH_NUGET_TOKEN }}
         run: dotnet nuget push "*.nupkg" --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key $NUGET_AUTH_TOKEN --skip-duplicate
         working-directory: Bank/nupkg
       - name: Create GitHub Release v1.0.0
