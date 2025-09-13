@@ -38,5 +38,41 @@ namespace Bank.Domain.Tests
             Assert.That(account.Balance, Is.EqualTo(expected).Within(0.001),
                 "Account not credited correctly");
         }
+
+        [Test]
+        public void Debit_WithAmountGreaterThanBalance_Throws()
+        {
+            // Arrange
+            double beginningBalance = 11.99;
+            double debitAmount = 20.00;
+            var account = new BankAccount("Mr. Bryan Walton", beginningBalance);
+
+            // Act & Assert
+            Assert.Throws<ArgumentOutOfRangeException>(() => account.Debit(debitAmount));
+        }
+
+        [Test]
+        public void Debit_WithNegativeAmount_Throws()
+        {
+            // Arrange
+            double beginningBalance = 11.99;
+            double debitAmount = -1.00;
+            var account = new BankAccount("Mr. Bryan Walton", beginningBalance);
+
+            // Act & Assert
+            Assert.Throws<ArgumentOutOfRangeException>(() => account.Debit(debitAmount));
+        }
+
+        [Test]
+        public void Credit_WithNegativeAmount_Throws()
+        {
+            // Arrange
+            double beginningBalance = 11.99;
+            double creditAmount = -5.00;
+            var account = new BankAccount("Mr. Bryan Walton", beginningBalance);
+
+            // Act & Assert
+            Assert.Throws<ArgumentOutOfRangeException>(() => account.Credit(creditAmount));
+        }
     }
 }
